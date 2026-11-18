@@ -1,0 +1,80 @@
+{
+  "model": "BAAI/bge-small-zh-v1.5",
+  "onnx_repository": "Qdrant/bge-small-zh-v1.5",
+  "model_snapshot": "46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59",
+  "onnx_sha256": "1294ea4b6331115a353d81f96b85e8c8d7fdcc284453d5b2fab5b016230aad38",
+  "question": "星灯工具能把结果导出成电子表格吗？",
+  "query_instruction": "为这个句子生成表示以用于检索相关文章：",
+  "query_embedding_input": "为这个句子生成表示以用于检索相关文章：星灯工具能把结果导出成电子表格吗？",
+  "documents_have_instruction": false,
+  "metric": "cosine_similarity",
+  "dimensions": 512,
+  "top_k": 1,
+  "ranking": [
+    {
+      "document_id": "export-guide",
+      "chunk_id": "export-guide:1",
+      "source": "samples/export-guide.md",
+      "source_sha256": "fceb96a857491b954c64dc8c92e1b43826286f228675d456f12b51009a0f84a2",
+      "start": 0,
+      "end": 66,
+      "text": "# 星灯工具：导出结果\n\n星灯工具支持将整理结果导出为 Excel、CSV、JSON。可以在导出菜单选择格式，再将文件保存到本机。\n",
+      "score": 0.7057507384187898
+    },
+    {
+      "document_id": "appearance",
+      "chunk_id": "appearance:1",
+      "source": "samples/appearance.md",
+      "source_sha256": "26eb0a57769b726fe8b4dff18b919526169148ca9263069494c526c1273a4bd0",
+      "start": 0,
+      "end": 61,
+      "text": "# 星灯工具：界面设置\n\n星灯工具可以切换浅色或深色主题，也可以调整界面字号。关闭后重新打开，会恢复上次保存的显示设置。\n",
+      "score": 0.5251211981541792
+    },
+    {
+      "document_id": "weather",
+      "chunk_id": "weather:1",
+      "source": "samples/weather.md",
+      "source_sha256": "5e73fb1c2c215f256e64e56021b4722eceb00cb5f1c8543ca4ddcbcb9dc44f07",
+      "start": 0,
+      "end": 42,
+      "text": "# 周末天气示例\n\n周末多云，下午可能下雨。外出建议带伞，并根据气温变化增减衣物。\n",
+      "score": 0.2808023478624374
+    }
+  ],
+  "selected": [
+    {
+      "document_id": "export-guide",
+      "chunk_id": "export-guide:1",
+      "source": "samples/export-guide.md",
+      "source_sha256": "fceb96a857491b954c64dc8c92e1b43826286f228675d456f12b51009a0f84a2",
+      "start": 0,
+      "end": 66,
+      "text": "# 星灯工具：导出结果\n\n星灯工具支持将整理结果导出为 Excel、CSV、JSON。可以在导出菜单选择格式，再将文件保存到本机。\n",
+      "score": 0.7057507384187898
+    }
+  ],
+  "expected_top1_document": "export-guide",
+  "example_expectation_met": true,
+  "query_vector_first_8": [
+    -0.0037558123003691435,
+    0.02780633606016636,
+    -0.04118106886744499,
+    -0.007604874670505524,
+    -0.019666288048028946,
+    0.03687584772706032,
+    -0.08435020595788956,
+    0.025006305426359177
+  ],
+  "runtime_versions": {
+    "fastembed": "0.9.1",
+    "numpy": "2.2.3",
+    "onnxruntime": "1.31.1"
+  },
+  "python_version": "3.13.2",
+  "provider": "CPUExecutionProvider",
+  "elapsed_seconds": 0.535,
+  "network_attempts": 0,
+  "generated_answer": null,
+  "scope": "one fixed question, three synthetic passages, in-memory retrieval only"
+}

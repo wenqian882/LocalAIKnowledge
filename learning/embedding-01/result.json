@@ -1,0 +1,78 @@
+{
+  "model": "BAAI/bge-small-zh-v1.5",
+  "onnx_repository": "Qdrant/bge-small-zh-v1.5",
+  "model_snapshot": "46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59",
+  "onnx_sha256": "1294ea4b6331115a353d81f96b85e8c8d7fdcc284453d5b2fab5b016230aad38",
+  "metric": "cosine_similarity",
+  "encoding": "same model, raw sentences, no query instruction",
+  "dimensions": 512,
+  "sentences": {
+    "A": "支持导出 Excel。",
+    "B": "可以生成电子表格。",
+    "C": "明天可能下雨。"
+  },
+  "vector_preview_first_8": {
+    "A": [
+      -0.024025119841098785,
+      -0.006626539397984743,
+      0.05567610636353493,
+      -0.005855059251189232,
+      -0.008160455152392387,
+      -0.02264387346804142,
+      -0.04009021818637848,
+      0.0189114511013031
+    ],
+    "B": [
+      0.042237475514411926,
+      0.07930836826562881,
+      0.027346812188625336,
+      0.05338694155216217,
+      -0.01875685155391693,
+      -0.025128891691565514,
+      -0.13701970875263214,
+      -0.0034658233635127544
+    ],
+    "C": [
+      0.003403415670618415,
+      0.010394874028861523,
+      -0.008653122931718826,
+      0.06035621464252472,
+      -0.02653508447110653,
+      -0.019059939309954643,
+      -0.01724979095160961,
+      0.033750664442777634
+    ]
+  },
+  "pairs": [
+    {
+      "pair": "A/B",
+      "score": 0.607955190986909
+    },
+    {
+      "pair": "A/C",
+      "score": 0.4377002660188502
+    },
+    {
+      "pair": "B/C",
+      "score": 0.4119032127806216
+    }
+  ],
+  "hypothesis": "A/B is greater than A/C and B/C",
+  "hypothesis_observed": true,
+  "runtime_versions": {
+    "fastembed": "0.9.1",
+    "numpy": "2.2.3",
+    "onnxruntime": "1.31.1"
+  },
+  "python_version": "3.13.2",
+  "provider": "CPUExecutionProvider",
+  "elapsed_seconds": 0.457,
+  "network_attempts": 0,
+  "checks": {
+    "finite_512d_vectors": true,
+    "self_similarity": true,
+    "symmetry": true,
+    "range": true
+  },
+  "scope": "three fixed synthetic sentences; no user documents or API calls"
+}

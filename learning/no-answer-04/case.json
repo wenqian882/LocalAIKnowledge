@@ -1,0 +1,12 @@
+{
+  "question": "星灯工具支持多人权限管理吗？",
+  "expected_answerability": "not_stated_in_fixture",
+  "expected_response_when_answering": "资料未说明，无法确认。",
+  "annotation_basis": "三份固定资料只有导出、界面显示与天气内容，没有多人权限管理说明。",
+  "annotation_origin": "review of the three synthetic fixtures before inference; not a model judgement",
+  "reference_sources": [
+    "../embedding-02/samples/export-guide.md",
+    "../embedding-02/samples/appearance.md",
+    "../embedding-02/samples/weather.md"
+  ]
+}

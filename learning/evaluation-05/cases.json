@@ -1,0 +1,54 @@
+{
+  "scope": "two synthetic teaching cases; not a benchmark or employment criterion",
+  "model": "BAAI/bge-small-zh-v1.5",
+  "model_sha256": "1294ea4b6331115a353d81f96b85e8c8d7fdcc284453d5b2fab5b016230aad38",
+  "case_count": 2,
+  "evaluated_generations": 0,
+  "answer_accuracy": null,
+  "cases": [
+    {
+      "id": "Q1",
+      "question": "星灯工具能把结果导出成电子表格吗？",
+      "expected_answerability": "answerable",
+      "supporting_chunk_ids": [
+        "export-guide:1"
+      ],
+      "expected_response_behavior": "可以依据导出Excel的原文回答，并引用对应资料。",
+      "annotation_origin": "reviewed synthetic fixture; not inferred from similarity score",
+      "retrieval_observation": {
+        "report": "../embedding-02/result.json",
+        "top1_chunk_id": "export-guide:1",
+        "score": 0.7057507384187898,
+        "supporting_chunk_retrieved": true
+      },
+      "generation_observation": {
+        "actual_response": null,
+        "facts_supported": null,
+        "citations_verified": null,
+        "appropriate_uncertainty": null,
+        "status": "not_evaluated"
+      }
+    },
+    {
+      "id": "Q2",
+      "question": "星灯工具支持多人权限管理吗？",
+      "expected_answerability": "not_stated",
+      "supporting_chunk_ids": [],
+      "expected_response_behavior": "资料未说明，无法确认。不能肯定或否定权限能力。",
+      "annotation_origin": "reviewed synthetic fixture; not inferred from similarity score",
+      "retrieval_observation": {
+        "report": "../no-answer-04/result.json",
+        "top1_chunk_id": "export-guide:1",
+        "score": 0.48834877760076834,
+        "supporting_chunk_retrieved": false
+      },
+      "generation_observation": {
+        "actual_response": null,
+        "facts_supported": null,
+        "citations_verified": null,
+        "appropriate_uncertainty": null,
+        "status": "not_evaluated"
+      }
+    }
+  ]
+}

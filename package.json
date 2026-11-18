@@ -1,0 +1,38 @@
+{
+  "name": "local-ai-knowledge",
+  "productName": "LocalAI Knowledge",
+  "version": "0.7.0",
+  "private": true,
+  "description": "A local-first desktop knowledge workspace with explicit model API calls. RAG integration is planned.",
+  "license": "MIT",
+  "main": "dist-electron/electron/main.js",
+  "scripts": {
+    "format": "prettier --write \"electron/**/*.ts\" \"shared/**/*.ts\" \"src/**/*.{ts,tsx,css}\" \"tests/*.cjs\" \"scripts/*.cjs\"",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.electron.json --noEmit",
+    "build": "npm run typecheck && vite build --base ./ && tsc -p tsconfig.electron.json && node scripts/copy-pdf-resources.cjs",
+    "start": "npm run build && electron .",
+    "test": "npm run build && node scripts/test-unit.cjs && node tests/desktop.cjs && node tests/model-desktop.cjs && node tests/documents-desktop.cjs && node tests/chunks-desktop.cjs && node tests/chunk-search-desktop.cjs",
+    "package": "npm run build && node scripts/package.cjs",
+    "test:portable": "npm run build && node scripts/test-portable.cjs",
+    "test:chunks": "npm run build && node --test tests/chunking.test.cjs && node tests/chunks-desktop.cjs",
+    "test:keyword": "npm run build && node tests/chunk-search-desktop.cjs"
+  },
+  "dependencies": {
+    "mammoth": "1.13.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "unpdf": "2.2.1"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.0.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "electron": "^45.3.2",
+    "pdfjs-dist": "6.5.438",
+    "playwright": "^1.56.0",
+    "prettier": "^3.10.1",
+    "typescript": "^5.9.0",
+    "vite": "^8.3.8"
+  }
+}
